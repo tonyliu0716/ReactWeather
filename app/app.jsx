@@ -22,10 +22,8 @@ ReactDOM.render(
         <Route path="/" component={Main}>
         
            <Route path="about" component={About}/>
-           <Route path="examples" component={Examples}/>
-            
-            // default component would show   
-            <IndexRoute component={Weather}/>
+           <Route path="examples" component={Examples}/> 
+           <IndexRoute component={Weather}/>
         </Route>
     </Router>, 
     document.getElementById('app') 
