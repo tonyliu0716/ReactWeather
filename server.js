@@ -7,7 +7,6 @@ var app = express();
 const PORT = process.env.PORT || 3000;
 
 // transfer HTTPS to HTTP
-
 app.use(function (req, res, next) {
     if (req.headers['x-forwarded-proto'] === 'https') {
         // send https to http
