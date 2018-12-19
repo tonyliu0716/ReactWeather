@@ -14,6 +14,8 @@ var webpack = require('webpack');
 module.exports = {
     // use jquery and foundation need to run: npm install css-loader@0.23.1 script-loader@0.6.1 style-loader@0.13.0 jquery@2.2.1 foundation-sites@6.2.0 --save-dev
 
+    // use sass we need to run: npm install sass-loader node-sass --save-dev
+
     entry: [
         'script!jquery/dist/jquery.min.js',
         'script!foundation-sites/dist/foundation.min.js',
@@ -34,7 +36,7 @@ module.exports = {
         filename: './public/bundle.js'
     },
     resolve: {
-        // setting the root then we don't have to write something like 
+        // setting the root then we don't have to write something like
         // var Greeter = require('./component/Greeter')
         // all we need to do is var Greeter = require('Greeter');
         root: __dirname,
@@ -49,7 +51,7 @@ module.exports = {
             WeatherMessage: 'app/components/WeatherMessage.jsx',
             openWeatherMap: 'app/api/openWeatherMap.jsx',
             ErrorModal: 'app/components/ErrorModal.jsx',
-            applicationStyles: 'app/styles/app.css'
+            applicationStyles: 'app/styles/app.scss'
         },
         extensions: ['', '.js', '.jsx']
     },
