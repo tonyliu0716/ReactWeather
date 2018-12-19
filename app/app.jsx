@@ -16,6 +16,9 @@ var Examples = require('Examples');
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
+// import our custom app.css file
+require('style!css!applicationStyles');
+
 ReactDOM.render(
     // add the props
     <Router history={hashHistory}>
