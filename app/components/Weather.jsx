@@ -14,9 +14,12 @@ var Weather = React.createClass({
 
         var that = this;
         
-        
+        // before we start searching the weather, clear the previous search history
         this.setState({
-            isLoading: true
+            isLoading: true,
+            errorMessage: undefined,
+            location: undefined,
+            temp: undefined
         });
         
         // use API to get data
@@ -33,6 +36,30 @@ var Weather = React.createClass({
             });
             
         });
+    },
+
+    componentDidMount: function() {
+        // pull out the location from the URL
+        var location = this.props.location.query.location;
+
+        // trigger the search
+        if(location && location.length > 0) {
+            this.handleSearch(location);
+            // after search clean the location value
+            window.location.hash = '#/';
+        }
+    },
+
+    componentWillReceiveProps: function(newProps) {
+        // pull out the location from the URL
+        var location = newProps.location.query.location;
+
+        // trigger the search
+        if(location && location.length > 0) {
+            this.handleSearch(location);
+            // after search clean the location value
+            window.location.hash = '#/';
+        }
     },
     
     render: function() {

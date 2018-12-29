@@ -9,7 +9,7 @@ var Examples = React.createClass({
                 <p>Here are a few example locations to try out:</p>
                 <ol>
                    <li>
-                       <Link to='/?location=Philadephia'>Philadelphia, PA</Link>
+                       <Link to='/?location=Chicago'>Chicago, IL</Link>
                    </li>
                    <li>
                        <Link to='/?location=Dallas'>Dallas, TX</Link>
